@@ -1,0 +1,35 @@
+[
+    {
+      "RecipeId": 42,
+      "Name": "Cabbage Soup",
+      "RecipeCategory": "Vegetable",
+      "Images": "https://img.sndimg.com/food/image/upload/w_555,h_416,c_fit,fl_progressive,q_95/v1/img/recipes/42/picVEMxk8.jpg",
+      "AggregatedRating": 4.5,
+      "Description": "Make and share this Cabbage Soup recipe from Food.com.",
+      "Calories": 103,
+      "RecipeIngredientParts": "plain tomato juice, cabbage, onion, carrots, celery",
+      "RecipeInstructions": "Mix everything together and bring to a boil., Reduce heat and simmer for 30 minutes (longer if you prefer your veggies to be soft)., Refrigerate until cool., Serve chilled with sour cream."
+    },
+    {
+      "RecipeId": 45,
+      "Name": "Buttermilk Pie With Gingersnap Crumb Crust",
+      "RecipeCategory": "Pie",
+      "Images": "https://img.sndimg.com/food/image/upload/w_555,h_416,c_fit,fl_progressive,q_95/v1/img/recipes/45/pic79tPh5.jpg",
+      "AggregatedRating": 4,
+      "Description": "Make and share this Buttermilk Pie With Gingersnap Crumb Crust recipe from Food.com.",
+      "Calories": 228,
+      "RecipeIngredientParts": "sugar, margarine, egg, flour, salt, buttermilk, graham cracker crumbs, margarine",
+      "RecipeInstructions": "c(Preheat oven to 350°F., Make pie crust, using 8 inch pie pan, do not bake., Mix sugar and margarine in medium bowl until blended; beat in egg whites and egg., Stir in flour, salt, and buttermilk until well blended., Pour filling into prepared crust, bake 40 minutes or until sharp knife inserted near center comes out clean., Sprinkle with nutmeg and serve warm or chilled., Combine graham crumbs, gingersnap crumbs, and margarine in 8 or 9 inch pie pan, pat mixture evenly on bottom and side of pan., \nBake 8 to 10 minutes or until edge of crust is lightly browned., Cool on wire rack.)"
+    },
+    {
+      "RecipeId": 59,
+      "Name": "Lou's Fabulous Bruschetta",
+      "RecipeCategory": "Vegetable",
+      "Images": "https://img.sndimg.com/food/image/upload/w_555,h_416,c_fit,fl_progressive,q_95/v1/img/recipes/59/pickKDLXe.jpg",
+      "AggregatedRating": 5,
+      "Description": "Make and share this Lou's Fabulous Bruschetta recipe from Food.com.",
+      "Calories": 221,
+      "RecipeIngredientParts": "French baguette, butter, garlic powder, ricotta cheese, parmesan cheese, salt, tomatoes, olive oil, fresh basil leaves",
+      "RecipeInstructions": "Cut baguette into slices., Butter and then sprinkle garlic powder each piece, and bake till lightly golden brown., Mix garlic powder, Parmesan cheese, and salt in the ricotta cheese, till a lovely blended taste., Dice tomatoes in small cubes,   add Olive Oil, and  small strips of fresh basil leaves, cut into thin strips., Spread the ricotta mixture, generously on the cooled garlic bread slices., Top with tomato mixture and bake at 350F for 10 minutes., Enjoy!"
+    }
+]
