@@ -5,9 +5,8 @@ struct RecipeDetailsView: View {
     @StateObject var viewModel: RecipeDetailsViewModel
     
     init(recipe: Recipe) {
-            _viewModel = StateObject(wrappedValue: RecipeDetailsViewModel(recipe: recipe))
-        }
-//    @State private var isRatingViewPresented: Bool = false
+        _viewModel = StateObject(wrappedValue: RecipeDetailsViewModel(recipe: recipe))
+    }
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false, content: {
@@ -38,11 +37,18 @@ struct RecipeDetailsView: View {
                                 .background(Color.green.opacity(0.15))
                             
                             Spacer()
-                            Button(action: {}, label: {
-                                Image(systemName: "bookmark.fill")
-                                    .foregroundColor(Color.green)
+                            Button(action: {
+                                if viewModel.isSaved {
+                                    viewModel.deleteSavedRecipe()
+                                } else {
+                                    viewModel.addSavedRecipe()
+                                }
+                            }, label: {
+                                Image(systemName: viewModel.isSaved ? "bookmark.fill" : "bookmark")
+                                    .foregroundColor(viewModel.isSaved ? .green : .gray)
                                     .font(.system(size: 20))
-                            }).frame(height: 50)
+                            })
+                            .frame(height: 50)
                         }
                         .padding(.horizontal)
                         
@@ -108,7 +114,6 @@ struct RecipeDetailsView: View {
                             HStack {
                                 Text("Ingredients")
                                     .font(.system(size: 23, weight: .bold))
-                                
                                 Spacer()
                             }
                             .padding(.vertical)
@@ -129,6 +134,19 @@ struct RecipeDetailsView: View {
                                     .padding(.horizontal)
                                 }
                             }
+                            HStack {
+                                Button(action: {
+                                    ShoppingViewModel().addShoppingItems(names: viewModel.recipe.ingredients.components(separatedBy: ", "))
+                                }, label: {
+                                    Text("Add to Shopping List")/*.font(.system(size: 20))*/
+                                        .fontWeight(.bold)
+                                        .foregroundColor(.white)
+                                }).padding(.horizontal, 10)
+                                    .padding(.vertical, 8)
+                                    .background(Color.green)
+                                    .cornerRadius(5)
+                            } .padding(.vertical)
+                                .padding(.horizontal)
                         }.background(Color.white)
                         
                         VStack{
@@ -154,15 +172,12 @@ struct RecipeDetailsView: View {
                                         Spacer()
                                     }
                                     .padding(.vertical)
-                                    //  Divider()
+                                   
                                 }
                                 .padding(.horizontal)
                             }
                             Divider()
-                            //                        } .background(Color.white)
-                            
                             VStack{
-//                                                                Text("Do you like the recipe?")
                                 Text("Do you like the recipe?")
                                     .font(.system(size: 20))
                                     .fontWeight(.bold)
@@ -179,7 +194,7 @@ struct RecipeDetailsView: View {
                                     }
                                     Spacer()
                                     Button(action: { viewModel.setRating() }, label: {
-                                        Text("Save")/*.font(.system(size: 20))*/
+                                        Text("Save")
                                             .fontWeight(.bold)
                                             .foregroundColor(.white)
                                     }).padding(.horizontal, 8)
@@ -187,27 +202,6 @@ struct RecipeDetailsView: View {
                                         .background(Color.green)
                                         .cornerRadius(5)
                                 }.padding(.horizontal)
-//                                Button(action: { isRatingViewPresented.toggle() }, label: {
-//                                    Text("Rate Recipe").font(.system(size: 20))
-//                                        .fontWeight(.bold)
-//                                        .foregroundColor(.white)
-//                                })
-//                                .frame(width: UIScreen.main.bounds.width - 30, height: 70)
-//                                .background(Color.green)
-//                                .cornerRadius(5)
-//                                .padding(.horizontal)
-//                                .sheet(isPresented: $isRatingViewPresented) {
-//                                    VStack{
-//                                        Text("Do you like the recipe?")
-//                                        StarsView(rating: $rating, isInteractive: true)
-//                                            .font(.system(size: 23))
-//                                        Text("Rate it to improve recommendations")
-//                                            .foregroundColor(.gray).font(.system(size: 10))
-//                                        TextEditor()
-//                                    }
-//                                    .presentationDetents([.medium]) // Можна задати розмір
-//                                }
-                                
                             }
                             .frame(maxWidth: .infinity)
                             .padding(.vertical)
@@ -217,16 +211,16 @@ struct RecipeDetailsView: View {
                     }
                 }
                 .background(Color.gray.opacity(0.3))
-                .cornerRadius(30)
-                .offset(y: -30)
+                .cornerRadius(25)
+                .offset(y: -35)
             }
         })
         //.navigationBarHidden(true)
         .onAppear{
             let appearance = UINavigationBarAppearance()
-            appearance.configureWithTransparentBackground() // Робить фон прозорим
-            appearance.backgroundColor = .clear // Додатково встановлює прозорість
-            appearance.titleTextAttributes = [.foregroundColor: UIColor.white] // Колір тексту заголовка
+            appearance.configureWithTransparentBackground()
+            appearance.backgroundColor = .clear
+            appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
             appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
             
             UINavigationBar.appearance().standardAppearance = appearance
@@ -234,7 +228,6 @@ struct RecipeDetailsView: View {
         }
         .padding(.bottom, 70)
         .ignoresSafeArea(.all, edges: .all)
-        //        .toolbar(.hidden, for: .tabBar)
     }
 }
 

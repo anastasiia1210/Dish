@@ -8,13 +8,21 @@
     <entity name="RecipeData" representedClassName="RecipeData" syncable="YES">
         <attribute name="calories" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="descriptionText" optional="YES" attributeType="String"/>
-        <attribute name="id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="image" optional="YES" attributeType="String"/>
         <attribute name="ingredients" optional="YES" attributeType="String"/>
         <attribute name="instructions" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="rating" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <relationship name="category" maxCount="1" deletionRule="Nullify" destinationEntity="RecipeCategoryData" inverseName="recipes" inverseEntity="RecipeCategoryData"/>
+    </entity>
+    <entity name="SavedRecipeData" representedClassName="SavedRecipeData" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="ShoppingItemData" representedClassName="ShoppingItemData" syncable="YES">
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="isDone" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String"/>
     </entity>
     <entity name="UserRatingData" representedClassName="UserRatingData" syncable="YES">
         <attribute name="rating" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>

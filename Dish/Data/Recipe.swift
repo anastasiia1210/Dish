@@ -22,10 +22,6 @@ struct Recipe: Codable, Hashable {
         case ingredients = "RecipeIngredientParts"
         case instructions = "RecipeInstructions"
     }
-    
-//    func ingredientsArray() -> [String] {
-//            return ingredients.components(separatedBy: ", ")
-//        }
 }
 
 extension Recipe {

@@ -8,6 +8,11 @@ public struct AppView: View {
                 .tabItem {
                     Image(systemName: "house")
                 }
+            
+            ShoppingView()
+                .tabItem {
+                    Image(systemName: "cart")
+                }
 
             SavedView()
                 .tabItem {

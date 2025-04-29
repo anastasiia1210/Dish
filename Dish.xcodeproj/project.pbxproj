@@ -10,12 +10,20 @@
 		3B80C7892DA06F1200F49039 /* UserRatingData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B80C7872DA06F1200F49039 /* UserRatingData+CoreDataClass.swift */; };
 		3B80C78A2DA06F1200F49039 /* UserRatingData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B80C7882DA06F1200F49039 /* UserRatingData+CoreDataProperties.swift */; };
 		3BA47B952D90B26D0022912F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3BA47B942D90B26D0022912F /* Kingfisher */; };
+		3BDCE2082DA32B9100158C71 /* SavedRecipeData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCE2062DA32B9100158C71 /* SavedRecipeData+CoreDataClass.swift */; };
+		3BDCE2092DA32B9100158C71 /* SavedRecipeData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCE2072DA32B9100158C71 /* SavedRecipeData+CoreDataProperties.swift */; };
+		3BDCE29B2DABE9D200158C71 /* ShoppingItemData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCE2992DABE9D200158C71 /* ShoppingItemData+CoreDataClass.swift */; };
+		3BDCE29C2DABE9D200158C71 /* ShoppingItemData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCE29A2DABE9D200158C71 /* ShoppingItemData+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3B70C8AC2D3EF1FB0049ADF3 /* Dish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B80C7872DA06F1200F49039 /* UserRatingData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserRatingData+CoreDataClass.swift"; path = "Dish/Data/CoreData/UserRatingData+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3B80C7882DA06F1200F49039 /* UserRatingData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserRatingData+CoreDataProperties.swift"; path = "Dish/Data/CoreData/UserRatingData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3BDCE2062DA32B9100158C71 /* SavedRecipeData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SavedRecipeData+CoreDataClass.swift"; path = "Dish/Data/CoreData/SavedRecipeData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3BDCE2072DA32B9100158C71 /* SavedRecipeData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SavedRecipeData+CoreDataProperties.swift"; path = "Dish/Data/CoreData/SavedRecipeData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3BDCE2992DABE9D200158C71 /* ShoppingItemData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ShoppingItemData+CoreDataClass.swift"; path = "Dish/Data/CoreData/ShoppingItemData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3BDCE29A2DABE9D200158C71 /* ShoppingItemData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ShoppingItemData+CoreDataProperties.swift"; path = "Dish/Data/CoreData/ShoppingItemData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -41,6 +49,10 @@
 		3B70C8A32D3EF1FB0049ADF3 = {
 			isa = PBXGroup;
 			children = (
+				3BDCE2992DABE9D200158C71 /* ShoppingItemData+CoreDataClass.swift */,
+				3BDCE29A2DABE9D200158C71 /* ShoppingItemData+CoreDataProperties.swift */,
+				3BDCE2062DA32B9100158C71 /* SavedRecipeData+CoreDataClass.swift */,
+				3BDCE2072DA32B9100158C71 /* SavedRecipeData+CoreDataProperties.swift */,
 				3B80C7872DA06F1200F49039 /* UserRatingData+CoreDataClass.swift */,
 				3B80C7882DA06F1200F49039 /* UserRatingData+CoreDataProperties.swift */,
 				3B70C8AE2D3EF1FB0049ADF3 /* Dish */,
@@ -135,7 +147,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B80C7892DA06F1200F49039 /* UserRatingData+CoreDataClass.swift in Sources */,
+				3BDCE29B2DABE9D200158C71 /* ShoppingItemData+CoreDataClass.swift in Sources */,
+				3BDCE29C2DABE9D200158C71 /* ShoppingItemData+CoreDataProperties.swift in Sources */,
 				3B80C78A2DA06F1200F49039 /* UserRatingData+CoreDataProperties.swift in Sources */,
+				3BDCE2082DA32B9100158C71 /* SavedRecipeData+CoreDataClass.swift in Sources */,
+				3BDCE2092DA32B9100158C71 /* SavedRecipeData+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +291,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -308,6 +325,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
