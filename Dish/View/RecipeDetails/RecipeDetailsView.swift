@@ -11,13 +11,9 @@ struct RecipeDetailsView: View {
     var body: some View {
         ScrollView(.vertical, showsIndicators: false, content: {
             VStack {
-                // ZStack {
                 KFImage(URL(string: viewModel.recipe.image))
                     .resizable()
-                //.foregroundColor(.gray)
-                // .redacted(reason: recipe.image == nil ? .placeholder : .init())
                     .frame(width: UIScreen.main.bounds.width, height:  UIScreen.main.bounds.width)
-                // }
                 
                 VStack {
                     VStack {
@@ -66,40 +62,15 @@ struct RecipeDetailsView: View {
                             .padding(.horizontal)
                             .padding(.vertical, 5)
                         
-                        //                        HStack(spacing: 8) {
-                        //                            Text("\(recipe.calories) kcal")
-                        //                                .foregroundColor(.gray)
-                        //
-                        //                            Spacer()
-                        //
-                        //                            Text("\(ingredients.count) ingredients")
-                        //                        }
-                        //                        .foregroundColor(.gray)
-                        //                        .padding(.top, 4)
-                        //                        .padding(.horizontal)
-                        
                         Divider()
                         
                         HStack {
                             StarsView(rating: .constant(viewModel.recipe.rating), isInteractive: false)
-                            
                                 .font(.system(size: 23))
-                            //.padding()
-                            //                            Image(systemName: "star.fill")
-                            //                                .foregroundColor(.yellow)
                             
                             Text(String(format: "%.1f", viewModel.recipe.rating))
                                 .font(.system(size: 23, weight: .bold))
-                            // .padding(.left, 10)
-                            
-                            //                            Text("(422 reviews)")
-                            //                                .foregroundColor(.gray)
-                            
-                            //                            Image(systemName: "clock")
-                            //                                .foregroundColor(.gray)
-                            //                                .padding(.leading)
-                            
-                            
+    
                             Spacer()
                             Text("\(viewModel.recipe.calories) kcal")
                                 .foregroundColor(.gray)
@@ -136,9 +107,11 @@ struct RecipeDetailsView: View {
                             }
                             HStack {
                                 Button(action: {
+                                    viewModel.rating = 5
+                                    viewModel.setRating()
                                     ShoppingViewModel().addShoppingItems(names: viewModel.recipe.ingredients.components(separatedBy: ", "))
                                 }, label: {
-                                    Text("Add to Shopping List")/*.font(.system(size: 20))*/
+                                    Text("Add to Shopping List")
                                         .fontWeight(.bold)
                                         .foregroundColor(.white)
                                 }).padding(.horizontal, 10)
@@ -215,7 +188,6 @@ struct RecipeDetailsView: View {
                 .offset(y: -35)
             }
         })
-        //.navigationBarHidden(true)
         .onAppear{
             let appearance = UINavigationBarAppearance()
             appearance.configureWithTransparentBackground()

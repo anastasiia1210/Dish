@@ -17,6 +17,7 @@ class RecipeDetailsViewModel: ObservableObject {
     }
     
     func addSavedRecipe(){
+        DataManager.shared.addUserRating(recipeId: Int64(recipe.id), rating: 5)
         DataManager.shared.addSaveRecipe(id: Int64(recipe.id))
         isSaved = true
     }
