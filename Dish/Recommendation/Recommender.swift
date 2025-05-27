@@ -8,7 +8,7 @@ public class Recommender {
             let input = RecipeRecommenderInput(items: userRatings, k: 200, restrict_: [], exclude: exclude)
             let result = try recommender.prediction(input: input)
             return result.recommendations
-        }catch(let error){
+        }catch(let error) {
             print(error.localizedDescription)
             return []
         }
