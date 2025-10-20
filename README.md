@@ -80,6 +80,13 @@ Built using the **MVVM (Model–View–ViewModel)** pattern to ensure:
 4. **Saved Recipes**  
    - Lists all favorited dishes  
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4568399c-3aaa-44db-b4af-af37cf22c3f6" height=400" />
+  <img src="https://github.com/user-attachments/assets/ed28f7ba-34d2-46f2-8e11-56e4417aaaa8" height="400" />
+  <img src="https://github.com/user-attachments/assets/6d3c7021-74fa-401c-95e0-cdfbe4900017" height="400" />
+  <img src="https://github.com/user-attachments/assets/29273165-51c3-4d14-b853-2a2f6c1a00a4" height="400"/>
+</p>
+
 ---
 
 ## 🌿 Result
